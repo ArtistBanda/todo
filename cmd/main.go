@@ -9,7 +9,7 @@ import (
 	"github.com/go-chi/chi/v5/middleware"
 )
 
-const ServeAddress = "0.0.0.0:8000"
+const ServeAddress = "0.0.0.0:8080"
 
 func main() {
 	router := chi.NewRouter()
