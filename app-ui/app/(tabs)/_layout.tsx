@@ -44,6 +44,19 @@ export default function TabLayout() {
           ),
         }}
       />
+      <Tabs.Screen
+        name="tasks"
+        options={{
+          title: "Tasks",
+          tabBarIcon: ({ color, focused }) => (
+            <Ionicons
+              name={focused ? "add-circle" : "add-circle-outline"}
+              color={color}
+              size={24}
+            />
+          ),
+        }}
+      />
     </Tabs>
   );
 }
