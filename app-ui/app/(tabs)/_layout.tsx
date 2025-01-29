@@ -1,26 +1,26 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Tabs } from "expo-router";
+import { Drawer } from 'expo-router/drawer';
 
 export default function TabLayout() {
   return (
-    <Tabs
+    <Drawer
       screenOptions={{
-        tabBarActiveTintColor: "#ffd33d",
+        drawerActiveTintColor: "#ffd33d",
         headerStyle: {
           backgroundColor: "#25292e",
         },
         headerShadowVisible: false,
         headerTintColor: "#fff",
-        tabBarStyle: {
+        drawerStyle: {
           backgroundColor: "#25292e",
         },
       }}
     >
-      <Tabs.Screen
+      <Drawer.Screen
         name="index"
         options={{
           title: "Index",
-          tabBarIcon: ({ color, focused }) => (
+          drawerIcon: ({ color, focused }) => (
             <Ionicons
               name={focused ? "home-sharp" : "home-outline"}
               color={color}
@@ -29,11 +29,11 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
+      <Drawer.Screen
         name="about"
         options={{
           title: "About",
-          tabBarIcon: ({ color, focused }) => (
+          drawerIcon: ({ color, focused }) => (
             <Ionicons
               name={
                 focused ? "information-circle" : "information-circle-outline"
@@ -44,11 +44,11 @@ export default function TabLayout() {
           ),
         }}
       />
-      <Tabs.Screen
+      <Drawer.Screen
         name="tasks"
         options={{
           title: "Tasks",
-          tabBarIcon: ({ color, focused }) => (
+          drawerIcon: ({ color, focused }) => (
             <Ionicons
               name={focused ? "add-circle" : "add-circle-outline"}
               color={color}
@@ -57,6 +57,6 @@ export default function TabLayout() {
           ),
         }}
       />
-    </Tabs>
+    </Drawer>
   );
 }
