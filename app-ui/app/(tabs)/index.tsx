@@ -6,11 +6,7 @@ import { TaskView } from "../components/taskView";
 export default function Index() {
   return (
     <>
-      <View style={styles.container}>
-        {/* <Text style={styles.text}>Home Screen</Text>
-        <Link href={"/about"}>About Page</Link> */}
-        <TaskView></TaskView>
-      </View>
+      <TaskView />
     </>
   );
 }
@@ -18,7 +14,7 @@ export default function Index() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#25292e",
+    backgroundColor: "#222831",
     alignItems: "center",
     justifyContent: "center",
   },

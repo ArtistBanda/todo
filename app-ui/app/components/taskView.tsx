@@ -1,31 +1,38 @@
-import { StyleSheet, View } from "react-native"
-import { Input } from "react-native-magnus"
-import { backgroundColor } from "../constants/styles"
+import { StyleSheet, View } from "react-native";
+import {
+  activeOutlineColor,
+  componentBackgroundColor,
+  containerBackgroundColor,
+  defaultMargin,
+  defaultMode,
+  placeholderTextColor,
+} from "../constants/styles";
+import { TextInput } from "react-native-paper";
+
+const placeholderTaskText: string = "Add Tasks ...";
 
 export const TaskView = () => {
-    return (
-        <View style={styles.container}>
-            <View>
-                <Input style={styles.inputField}></Input>
-            </View>
-        </View>
-    )
-}
+  return (
+    <View style={styles.container}>
+      <TextInput
+        style={styles.textInput}
+        mode={defaultMode}
+        outlineColor={componentBackgroundColor}
+        activeOutlineColor={activeOutlineColor}
+        placeholder={placeholderTaskText}
+        placeholderTextColor={placeholderTextColor}
+      />
+    </View>
+  );
+};
 
 const styles = StyleSheet.create({
-    container: {
-        backgroundColor: backgroundColor,
-        flex: 1,
-        flexDirection: "column",
-        width: "100%"
-    },
-    inputField: {
-        flexDirection: "row",
-        alignItems: "flex-start",
-        margin: 10,
-        backgroundColor: '25292e'
-    },
-    text: {
-        color: "#fff",
-    }
-})
+  container: {
+    backgroundColor: containerBackgroundColor,
+    flex: 1,
+  },
+  textInput: {
+    backgroundColor: componentBackgroundColor,
+    margin: defaultMargin,
+  },
+});
