@@ -1,18 +1,25 @@
 import { Ionicons } from "@expo/vector-icons";
-import { Drawer } from 'expo-router/drawer';
+import { Drawer } from "expo-router/drawer";
+import {
+  activeOutlineColor,
+  componentBackgroundColor,
+  containerBackgroundColor,
+  textColor,
+} from "../constants/styles";
 
 export default function TabLayout() {
   return (
     <Drawer
       screenOptions={{
-        drawerActiveTintColor: "#ffd33d",
+        drawerActiveTintColor: activeOutlineColor,
         headerStyle: {
-          backgroundColor: "#25292e",
+          backgroundColor: containerBackgroundColor,
         },
         headerShadowVisible: false,
-        headerTintColor: "#fff",
+        headerTintColor: textColor,
+        drawerInactiveTintColor: textColor,
         drawerStyle: {
-          backgroundColor: "#25292e",
+          backgroundColor: componentBackgroundColor,
         },
       }}
     >
